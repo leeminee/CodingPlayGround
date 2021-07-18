@@ -69,7 +69,7 @@ function randomQuiz(answer, printYes, printNo) {
 
 // anonymous function
 const printYes = function () {
-    console.log('yes! I love you too❤');
+    console.log('I love you too❤');
 };
 
 // named function
@@ -103,7 +103,7 @@ const calculate = (command, a, b) => {
         case 'add':
             return a + b;
         case 'substract':
-            return a - b;
+            return a - b; 
         case 'divide':
             return a / b;
         case 'multiply':
