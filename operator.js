@@ -1,9 +1,10 @@
-// 1. String concatenation
+'use strict';
+// 💡 1. String concatenation
 console.log('my'+' cat');
 console.log('1'+2);
 console.log(`string literals: 1 + 2 = ${1 + 2}`);
 
-// 2. Numeric operators
+// 💡 2. Numeric operators
 console.log(1 + 1); // add
 console.log(1 - 1); // substract
 console.log(1 / 1); // divide

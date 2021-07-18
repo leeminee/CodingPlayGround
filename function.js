@@ -1,5 +1,5 @@
-
-// 1. Function declaration
+'use strict';
+// 💡 1. Function declaration
 function printHello() {
     console.log('Hello');
 }
@@ -12,7 +12,7 @@ function log(message) {
 log('Minee');
 
 
-// 2. Parameters
+// 💡 2. Parameters
 // premitive parameters : passed by value
 // object parameters : passed by reference
 function changeName(obj) {
@@ -22,14 +22,14 @@ const ellie = {name : 'ellie'};
 changeName(ellie);
 console.log(ellie);
 
-// 3. Default parameters (added in ES6)
+// 💡 3. Default parameters (added in ES6)
 function showMessage(message, from = 'unkonwn') {
     console.log(`${message} by ${from}`);
 }
 
 showMessage("Hi!");
 
-// 4. Rest parameters (added in ES6)
+//💡 4. Rest parameters (added in ES6)
 function printAll(...args) {
     for (let i = 0 ; i < args.length; i++) {
         console.log(args[i]);
@@ -44,7 +44,7 @@ function printAll(...args) {
 
 printAll('dream', 'coding', 'ellie');
 
-// 5. Local scope
+// 💡 5. Local scope
 let globalMessage = 'global'; // global variable
 function printMessage() {
     let message = 'hello';
@@ -93,7 +93,7 @@ const simpleMultiply = (a,b) => {
 // IIFE : Immediately Invoked Function Expression
 (function hello() {
     console.log('IIFE');
-})();
+})(); 
 
 // Fun quiz time💛
 // function calculate(command, a, b)
@@ -110,6 +110,8 @@ const calculate = (command, a, b) => {
             return a * b;
         case 'remainder':
             return a % b; 
+        default:
+            return console.log('you have to input add or substract or divide or multiply or remainder.')
     }
 }
 console.log(calculate('remainder', 3,4));
