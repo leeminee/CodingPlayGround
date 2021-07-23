@@ -1,9 +1,6 @@
 // Q1. make a string out of an array
 {
     const fruits = ['apple', 'banana', 'orange'];
-    for(const fruit in fruits) {
-        console.log(`Q1. ${fruits[fruit]}`);
-    }
   }
   
   // Q2. make an array out of a string
@@ -56,11 +53,26 @@
   
   // Q6. make an array of enrolled students
   {
+      console.log(`>> Q6`);
+      const array = [];
+      for(const student of students) {
+          if(student.enrolled == true) {
+              array.push(student);
+          }
+      }
+      console.log(array);
+      
   }
   
   // Q7. make an array containing only the students' scores
   // result should be: [45, 80, 90, 66, 88]
   {
+      console.log(`>> Q7`);
+      const array = [];
+      for(const student of students) {
+          array.push(student.score);
+      }
+      console.log(array);
   }
   
   // Q8. check if there is a student with the score lower than 50
