@@ -4,9 +4,8 @@
 {
     const fruits = ['apple', 'banana', 'orange'];
     console.log(`>> Q1`);
-    for(const fruit of fruits) {
-        console.log(fruit);
-    }
+    const result = fruits.join();
+    console.log(result);
   }
   
   // Q2. make an array out of a string
@@ -20,17 +19,17 @@
   {
     const array = [1, 2, 3, 4, 5];
     console.log(`>> Q3`);
-    array.sort((a,b) => b -a); 
-    console.log(array);
+    const result = array.reverse();
+    console.log(result);
   }
   
   // Q4. make new array without the first two elements
   {
     const array = [1, 2, 3, 4, 5];
     console.log(`>> Q4`);
-    array.shift();
-    array.shift();
-    console.log(array)
+    const result = array.slice(2);
+    console.log(result);
+    console.log(array);
   }
   
   class Student {
@@ -51,81 +50,55 @@
   
   // Q5. find a student with the score 90
   {
-    //   for(const student of students) {
-    //       if(student.score == 90) {
-    //           console.log(`Q5. ${student}`)
-    //       }
-    //       console.log(student.find(a => a.score == 90));
-    //   }
-    console.log(`>> Q5`)
-      console.log(students.find(a => a.score == 90));
+    console.log(`>> Q5`);
+    const result = students.find((student) => student.score === 90);
+    console.log(result);
   }
   
   // Q6. make an array of enrolled students
   {
       console.log(`>> Q6`);
-      const array = [];
-      for(const student of students) {
-          if(student.enrolled == true) {
-              array.push(student);
-          }
-      }
-      console.log(array);
-      
+      const result = students.filter((student) => student.enrolled);
+      console.log(result);
   }
   
   // Q7. make an array containing only the students' scores
   // result should be: [45, 80, 90, 66, 88]
   {
       console.log(`>> Q7`);
-      const array = [];
-      for(const student of students) {
-          array.push(student.score);
-      }
-      console.log(array);
+      const result = students.map((student) => student.score);
+      console.log(result)
   }
   
   // Q8. check if there is a student with the score lower than 50
   {
       console.log(`>> Q8`);
-      for(const student of students) {
-          if(student.score < 50) {
-              console.log(student)
-          }
-      }
+      const result = students.some((student) => student.score < 50);
+      console.log(result);
+      const result2 = !students.every((student) => student.score >= 50);
+      console.log(result2);
   }
   
   // Q9. compute students' average score
   {
     console.log(`>> Q9`);
-    let scoreSum = 0;
-    let studentNum = 0;
-    for(const student of students) {
-        studentNum++;
-        scoreSum += student.score;
-    }
-    const result = scoreSum / studentNum;
-    console.log(result); 
+    const result = students.reduce((prev, curr) => prev + curr.score, 0);
+    console.log(result / students.length);
   }
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
     console.log(`>> Q10`);
-    let scores = [];
-    for(const student of students) {
-        scores.push(student.score);
-    }
-    console.log(scores);
+    const result = students.map((student) => student.score).join();
+    console.log(result);
   }
   
   // Bonus! do Q10 sorted in ascending order
   // result should be: '45, 66, 80, 88, 90'
   {
     console.log(`>> Bonus`);
-    let scores = [];
-    for(const student of students) {
-        scores.push(student.score);
-    }
-    console.log(scores.sort());
+    const result = students.map((student) => student.score).sort().join();
+    // const result = students.map((student) => student.score).sort((a,b) => a - b).join();
+    console.log(result);
   }
