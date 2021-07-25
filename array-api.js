@@ -1,6 +1,10 @@
 // Q1. make a string out of an array
 {
     const fruits = ['apple', 'banana', 'orange'];
+    console.log(`>> Q1`);
+    for(const fruit of fruits) {
+        console.log(fruit);
+    }
   }
   
   // Q2. make an array out of a string
@@ -48,6 +52,7 @@
     //       }
     //       console.log(student.find(a => a.score == 90));
     //   }
+    console.log(`>> Q5`)
       console.log(students.find(a => a.score == 90));
   }
   
@@ -77,6 +82,7 @@
   
   // Q8. check if there is a student with the score lower than 50
   {
+      
   }
   
   // Q9. compute students' average score
