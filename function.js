@@ -59,7 +59,7 @@ function printMessage() {
 printMessage();
 
 // Callback function using function expression
-function randomQuiz(answer, printYes, printNo) {
+function randomQuiz(answer, printYes, printNo) { // 이렇게 함수내부에서 또다른 함수를 사용하는것을 콜백함수라고 한다?
     if (answer === 'love you') {
         printYes();
     } else {
@@ -81,19 +81,20 @@ const printNo = function print() {
 randomQuiz('wrong',printYes, printNo);
 randomQuiz('love you' , printYes, printNo);
 
-// Arrow function
+// ✨Arrow function
 // always anonymous 
 const simplePrint = () => console.log('simplePrint!');
 const add = (a,b) => a+b;
-const simpleMultiply = (a,b) => {
+const simpleMultiply = (a,b) => { // Arrow function 에서 이렇게 블럭을 사용할경우에는 반드시 return 값을 써 주어야함.
     // do someting more
     return a * b;
 };
 
 // IIFE : Immediately Invoked Function Expression
+// 함수를 바로 호출하고 싶을때 아래와 같이 사용한다.
 (function hello() {
     console.log('IIFE');
-})(); 
+})();  
 
 // Fun quiz time💛
 // function calculate(command, a, b)
