@@ -8,7 +8,7 @@ class UserStorage {
                     (id === 'ellie' && password === 'dream') ||
                     (id === 'coder' && password === 'academy')
                 ) {
-                    resolve(id);
+                    resolve(id); 
                 } else {
                     reject(new Error('not found'));
                 }
@@ -16,10 +16,10 @@ class UserStorage {
         });
     } 
 
-    getRoles(user) {
+    getRoles(id) {
         return new Promise((resolve, reject) =>{
             setTimeout(() => {
-                if(user === 'ellie') {
+                if(id === 'ellie') {
                     resolve({name: 'ellie', role: 'admin'});
                 } else {
                     reject(new Error('no access'));
@@ -41,5 +41,6 @@ const password = prompt('enter your password');
 
 userStorage
 .getUserWithRole(id, password)
-.then(console.log)
-.catch(console.log);
+.then(console.log) // 성공하면 3초
+.catch(console.log); // loginUser에서 실패시 2초, getRoles에서 실패시 3초
+
