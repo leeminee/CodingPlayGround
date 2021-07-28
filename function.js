@@ -61,9 +61,9 @@ printMessage();
 // Callback function using function expression
 function randomQuiz(answer, printYes, printNo) { // 이렇게 함수내부에서 또다른 함수를 사용하는것을 콜백함수라고 한다?
     if (answer === 'love you') {
-        printYes();
+        printYes(); // 콜백함수
     } else {
-        printNo();
+        printNo(); // 콜백함수
     }
 }
 
