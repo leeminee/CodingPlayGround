@@ -59,7 +59,7 @@ printMessage();
 
 // Callback function using function expression
 function randomQuiz(answer, printYes, printNo) {
-  // 이렇게 인자로 함수를 받아 내부에서 실행하는 것을 콜백함수라고 한다?
+  // 이렇게 인자로 함수를 받아 내부에서 실행하는 것을 콜백함수라고 한다
   if (answer === "love you") {
     printYes();
   } else {
