@@ -18,7 +18,7 @@
     name: "Bob",
   };
 
-  // 💩
+  // Bad Code
   {
     function printManager(person) {
       console.log(person.job.manager.name);
@@ -27,7 +27,7 @@
     // printManager(person2);
   }
 
-  // 💩
+  // Bad Code
   {
     function printManager(person) {
       console.log(
@@ -42,7 +42,7 @@
     printManager(person2);
   }
 
-  // 💩
+  // Bad Code
   {
     function printManager(person) {
       console.log(person.job && person.job.manager && person.job.manager.name);
@@ -51,7 +51,7 @@
     printManager(person2);
   }
 
-  // ✨
+  // ✨ Optional Chaining
   {
     function printManager(person) {
       console.log(person.job?.manager?.name);
@@ -80,7 +80,7 @@
     console.log(userName);
   }
 
-  // 💩
+  // Bad Code
   {
     const name = "";
     const userName = name || "Guest";
